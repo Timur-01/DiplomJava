@@ -30,13 +30,6 @@ public class DefaultController {
         return "index";
     }
 
-//    @GetMapping("/product/{productId}")
-//    public String product(@PathVariable("productId") long id, Model model) {
-//        Product product = productRepository.findById(id).orElse(null);
-//        model.addAttribute("product", product);
-//        return "product";
-//    }
-
     @GetMapping("/product")
     public String product(@RequestParam("id") Long id, Model model) {
         Product product = productRepository.findById(id).orElse(null);
